@@ -3,14 +3,16 @@
 const userHelper    = require("../lib/util/user-helper")
 
 const express       = require('express');
-const tweetsRoutes  = express.Router();
+const tweetsRoutes  = express.Router(); //modular route-handling function
 
 module.exports = function(DataHelpers) {
 
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {
+        //sends response in a JSON string
         res.status(500).json({ error: err.message });
+        console.log(err);
       } else {
         res.json(tweets);
       }
