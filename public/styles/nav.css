@@ -13,14 +13,8 @@ nav {
   justify-content: space-between;
 }
 
-.title {
-  background-color: #40a150; 
-
-}
-
 .write-new-div {
   font-family: "Source Sans Pro", sans-serif;
-  background-color: #40a150; 
   display: flex;
   flex-direction: column;
 }

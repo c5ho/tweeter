@@ -22,6 +22,8 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -34,9 +36,10 @@
       </div>
     </nav>
 
+
     <header>
       <div class="avatar">
-        <img src="/images/profile-hex.png"> 
+        <img src="/images/calvin-hex.png"> 
       </div>
       <br>
       <div class="username">
@@ -45,22 +48,22 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.
-
-      There were a king with a large jaw and a queen with a plain face, on the throne of England; there were a king with a large jaw and a queen with a fair face, on the throne of France. In both countries it was clearer than crystal to the lords of the State preserves of loaves and fishes, that things in general were settled for ever.
-      
+  <div class="body-container">
+    <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form class="form-inline" action="./server/routes/tweets" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
+        <form class="tweet-form" action="/tweets/" method="POST">
+          <label for="tweet-text"></label>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <div class="tweet-submit">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-
+      <section class="tweet-container">
+      </section>
     </main>
+  </div>
   </body>
 </html>

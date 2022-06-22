@@ -14,22 +14,61 @@ html {
  * Global layout stuff
  */
 
+/*DEBUG********************************************************************/
+/*.body-container {
+  flex-direction: column;
+  border: 5px solid rgb(128, 0, 0);
+
+}
+
+header {
+  border: 5px solid rgb(41, 0, 128);
+}
+
+
+main {
+  border: 5px solid rgb(6, 128, 0);
+}
+
+.avatar {
+  background-color: #40a150; 
+}
+
+.username {
+  background-color: #40a150; 
+}
+
+.title {
+  background-color: #40a150; 
+}
+
+.write-new-div {
+  background-color: #40a150; 
+}
+
+/*DEBUG********************************************************************/
+
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
-  width: 100vw;
   display: flex;
   flex-direction: column;
 
+  
 }
 
-main {
-  background-color: #a35d18;
+.body-container {
   width: 90%;
- 
+  margin: auto;
+
+
+
 }
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
