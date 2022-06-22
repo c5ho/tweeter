@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   //character count for the text form
   let charCount = 0;
-  let maxChars = 10;
+  let maxChars = 140;
 
   $("#tweet-text").on("input", function() {
     charCount = $("#tweet-text").val().length;
@@ -31,7 +31,7 @@ $(document).ready(function() {
       counter.css("color", "red");
     }
     else {
-      counter.css("color", "white");
+      counter.css("color", "#545149");
     }
   });
 });
