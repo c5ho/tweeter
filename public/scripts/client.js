@@ -22,6 +22,36 @@ const data = [
       "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Mary",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@MaryOliver" },
+    "content": {
+      "text": "Tell me, what is it you plan to do with your one wild and precious life?"
+    },
+    "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "James",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@JamesBaldwin" },
+    "content": {
+      "text": "To act is to be committed, and to be committed is to be in danger."
+    },
+    "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Jane",
+      "avatars": "https://i.imgur.com/lRUnDgU.png",
+      "handle": "@JaneAusten" },
+    "content": {
+      "text": "Friendship is certainly the finest balm for the pangs of disappointed love."
+    },
+    "created_at": 1461113959088
   }
 ]
 
