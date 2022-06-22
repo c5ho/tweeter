@@ -1,0 +1,57 @@
+/*same as article.tweet*/
+.tweet {    
+  border-style: solid;
+  padding: 5px;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
+.tweet:hover {
+  box-shadow: 5px 5px;
+}
+
+.tweet header, .tweet footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.tweet .avatar-user {
+  display: flex;
+  padding: 10px 5px 5px 10px;
+}
+
+.tweet-content {
+  border-bottom: solid;
+  padding: 0.75em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tweet .handle {
+  color: #b5b3b0;
+  padding: 20px 20px 10px 10px;
+}
+
+.tweet .username {
+  padding: 5px;
+}
+
+.tweet footer {
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 0.75em;
+}
+
+.tweet-reactions {
+  display: flex;
+  flex-direction: row;
+}
+
+.flag, .retweet, .heart {
+  padding: 0.5em;
+}
+
+.flag:hover, .retweet:hover, .heart:hover {
+  color:rgb(210, 17, 85);
+}
