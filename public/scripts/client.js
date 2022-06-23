@@ -58,7 +58,6 @@ const data = [
 $(document).ready(function() {
 
   const createTweetElement = function(tweetData) {
-
     return(
       `<article class="tweet">
       <header>  
@@ -90,8 +89,25 @@ $(document).ready(function() {
       $('#tweet-container').append($tweet);
     }
   }
- 
- renderTweets(data);  
- 
-  
+  renderTweets(data);  
+
+  //!!!what is "event"?
+  $('#tweet-submit').submit(function (event) { 
+    const tweetEntered = $(this);
+    
+    //serialize tweet text for backend consumption
+    tweetQueryString = tweetEntered.serialize();
+
+    //send AJAX POST request
+    $post("/tweets/", tweetQueryString);
+    
+    // $.ajax({
+    //   type: "POST",
+    //   url: "/tweets/",
+    //   data: tweetQueryString,
+    // });
+    
+    //prevents default http POST from the tweet form
+    event.preventDefault();
+  });
 });

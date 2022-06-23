@@ -52,21 +52,27 @@
   <div class="body-container">
     <main class="container">
 
-      <!-- Tweet ontainer for new tweet form -->
+      <!-- Container for new tweet form -->
       <section class="new-tweet">
-        <form class="tweet-form" action="/tweets/" method="POST">
+        
+        <!-- Tweet form -->
+        <form id="tweet-submit" class="tweet-form" action="/tweets/" method="POST">
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="tweet-button-counter">
+          
+          <!--New tweet submit button and character remaining counter -->
+          <footer class="tweet-button-counter">
             <button type="submit">Tweet</button>
+            
+            <!--Character remaining counter -->
             <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
+          </footer>
         </form>
       </section>
      
-      <!-- Tweet container for all posted tweets -->
+      <!-- Container for all posted tweets -->
       <section id="tweet-container">
-        
+      <!-- Tweets entered dynamically via JS -->
       </section>
     </main>
   </div>
