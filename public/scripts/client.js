@@ -42,18 +42,16 @@ $(document).ready(function() {
     event.preventDefault();
 
     if ($('#counter').text() < 0) {
-      alert("Sorry, you cannot submit more than 140 characters!");
+      $("#tweet-status").text("Sorry, you cannot submit more than 140 characters!").show().fadeOut( 2000 );
     } 
     else if ($('#counter').text() >= 140) {
-      alert("Sorry, you cannot submit an empty tweet!")
+      $("#tweet-status").text("Sorry, you cannot submit an empty tweet!").show().fadeOut( 2000 );
     } else {
       
-      
-      
-   //   $('#tweet-sbmit').trigger("reset");
-      
-      
+      $("#tweet-status").text("Tweet sent!").show().fadeOut( 2000 );
+
       const tweetEntered = $(this);
+
       //serialize tweet text for backend consumption
       tweetQueryString = tweetEntered.serialize();
       
@@ -64,28 +62,43 @@ $(document).ready(function() {
         type: "POST",
         url: "/tweets",
         data: tweetQueryString,
+        success: function() {
+          //resets the tweet form and resets the counter back to 140 characters
+          $('#tweet-submit')[0].reset();
+          $('#counter').text(140);
+          //re-fetches tweets to show submitted tweet
+          loadTweets();          
+        },
+
+
+        // error: function(error) {}
+        // dataType: dataType
+
+
       });
 
-      //resets the tweet form and resets the counter back to 140 characters
-      $('#tweet-submit')[0].reset();
-      $('#counter').text(140);
+      //$('#tweet-submit').trigger("reset");
+
+
     }
   });
-
-  // const loadTweets = function(data) {
-  //   $.ajax({
-  //     type: "GET",
-  //     url: "/tweets",
-  //     data: data,
-  //   }).done(function (tweetData) {
-  //     renderTweets(tweetData);
-  // });
-
   const loadTweets = function() {
-    $.get("/tweets", function(tweetData) {
-      renderTweets(tweetData);
-    });
-  };
-  loadTweets();
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      success: function(tweetData) {
+        renderTweets(tweetData);
+      }
+    })
+  }
+  
+  // const loadTweets = function() {
+  //   $.get("/tweets", function(tweetData) {
+  //     renderTweets(tweetData);
+  //   });
+  // };
+  
+  loadTweets();          
+
 
 });
