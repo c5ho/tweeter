@@ -66,6 +66,7 @@ $(document).ready(function() {
         data: tweetQueryString,
       });
 
+      //resets the tweet form and resets the counter back to 140 characters
       $('#tweet-submit')[0].reset();
       $('#counter').text(140);
     }
