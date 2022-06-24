@@ -1,19 +1,47 @@
 #main-header {
-  background-color: rgba(110, 68, 5, 0.5);
+  background-color: rgba(43, 39, 34, 0.80);
   background-image: url("/images/45-degree-fabric-light.png");
   height: 400px;
   width: 100%;
   margin-top: 120px;
   display: flex;
   flex-direction: column;
-}
-
-.avatar {
-  display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .username {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  color: #f4f1ec;
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  
+  #main-header {
+    background-color: #f4f1ec;
+    background-image: none;
+    margin-top: 240px;
+    /* left: 0; */
+    /* position: fixed; */
+    width: 30vw;
+    color: #545149;
+
+
+  }
+  
+  /* .avatar {
+    background-color: #f4f1ec;
+    background-image: none;
+
+    
+
+  }
+*/
+ .username {
+    color: #545149;
+
+ }
+     
 }

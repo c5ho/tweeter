@@ -1,61 +1,49 @@
-/* .error-container {
-  position: relative;
-  height:25px
-} */
-
 #tweet-status {
   color: #ff0000;
   font-weight: bold;
   font-size: 0.85em;
   display: none;
-  /* position: absolute; */
-   height: 24px;  
-  border-style: 10px solid;
-  border: #ff0000;
-  /* z-index: 5;
-  /* margin: 100px; */
   padding-top: 25px;
   text-align: center;
 }
 
 #tweet-submit {
-  margin: 1.5em 0em;
+  margin: 1em 0em 1.5em;
 }
 
-.tweet-form {
+/* .tweet-form {
   color: #FFFFFF; 
   height: 120px;
-  width: 100%;
-  margin-top: 1em;
-}
+  /* width: 100%; */
+/* } */
 
 #tweet-text {
   width: 100%;
   background-color: #f4f1ec;
-  color: #545149;
-  font-size: 20px;
+  /* color: #545149; */
+  font-size: 1em;
   font-weight: bold;
   border: none;
-  border-bottom: 2px solid #545149;
+  border-bottom: solid #545149;
   outline: none;
 }
 
 #tweet-text::placeholder {
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: bold;
-  color: #545149;
+  /* color: #545149; */
 }
 
-.new-tweet {
+/* .new-tweet {
   width: 100%;
-}
+} */
 
 .tweet-button-counter {
   font-family: Bungee;
   margin-top: 0.5em;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  /* flex-direction: row;
+  align-items: center; */
   justify-content: space-between;
 }
 
@@ -63,7 +51,7 @@ button {
   color: #FFFFFF; 
   background-color: #7288d1; 
   border-radius: 4px;
-  box-shadow: 5px 5px #999
+  box-shadow: 5px 5px #999;
 }
 
 button:hover {
@@ -75,7 +63,8 @@ button:active {
   transform: translateY(-5px);
   transform: translateX(5px);
 }
-
+/* 
 #counter {
   color: #545149;
-}
+} */
+

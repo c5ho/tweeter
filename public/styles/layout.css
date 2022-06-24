@@ -15,9 +15,11 @@ html {
  */
 
 /*DEBUG********************************************************************/
-/*.body-container {
+/* .main-container { 
   flex-direction: column;
-  border: 5px solid rgb(128, 0, 0);
+  border: 1px solid rgb(128, 0, 0);
+  border-left: 1px red;
+
 
 }
 
@@ -44,32 +46,42 @@ main {
 
 .write-new-div {
   background-color: #40a150; 
-}
-
+} */
+ 
 /*DEBUG********************************************************************/
-
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-
-  
 }
 
-.body-container {
+.main-container {
   width: 90%;
   margin: auto;
-
-
-
+  color: #545149;
 }
 
+ /* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  
+  body {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+  }
 
+  .main-container {
+    margin-top: 120px;
+    color: #545149;
+    border-left: 200px;
+    height: 100vh;
+    overflow: scroll;
+    padding-right: 3%;
+    margin-left: 3%;
+  }
+}
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

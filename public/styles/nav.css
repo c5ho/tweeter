@@ -1,24 +1,29 @@
 nav {
   color: #FFFFFF; 
-  background-color: rgba(110, 68, 5, 0.5);
+  background-color: rgba(43, 39, 34, 0.80);
   background-image: url("/images/45-degree-fabric-light.png");
   font-family: Bungee;
-  z-index: 2;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  font-size: 1em;
+  padding-left: 5vw;
+  padding-right: 5vw;
   height: 120px;
   width: 100%;
+  
+  /*Keeps nav bar fixed and at the top of the page*/
+  position: fixed;
+  top: 0;
+
+  /*flex container*/
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
+
 }
 
 .write-new-div {
-  font-family: "Source Sans Pro", sans-serif;
   flex-direction: column;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .down-arrows {
@@ -26,3 +31,11 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (min-width: 1024px) {
+  
+  nav {
+    padding: 51.15px;
+  }
+}
+
