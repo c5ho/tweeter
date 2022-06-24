@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-  const escapeText = function (str) {
+  const escapeText = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }; 
+  };
     
   //extracts tweet data and appends it to tweet in HTML on main page
   const createTweetElement = function(tweetData) {
@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     //const text2 = $("<div>").text(tweetData.content.text).html();
 
-    return(
+    return (
       `<article class="tweet">
         <header>  
           <div class="avatar-user">
@@ -37,7 +37,7 @@ $(document).ready(function() {
         </footer>
       </article>`
     );
-  }
+  };
 
   //iterates through tweet object and calls createTweetElement for each tweet
   const renderTweets = function(tweets) {
@@ -47,21 +47,24 @@ $(document).ready(function() {
       const $tweet = createTweetElement(tweet);
       $('#tweet-container').prepend($tweet);
     }
-  }
+  };
 
   //submits tweet from new tweet form
-  $('#tweet-submit').submit(function (event) { 
+  $('#tweet-submit').submit(function(event) {
 
     //prevents default http POST from the tweet form
     event.preventDefault();
 
+    //shows error for tweet too long submitted
     if ($('#counter').text() < 0) {
       $("#tweet-status").slideUp();
       $("#tweet-status").text("You've got too much to say.  Get to the point! 🤭").slideDown();
-    } 
-    else if ($('#counter').text() >= 140) {
+    
+    //shows error for empty tweet submitted
+    } else if ($('#counter').text() >= 140) {
       $("#tweet-status").slideUp();
       $("#tweet-status").text("Nothing to say? I'm sure you can think of something! 😏").slideDown();
+    
     } else {
       $("#tweet-status").slideUp();
       $("#tweet-status").text("Success! You did it! 👌").slideDown().fadeOut(2000);
@@ -81,7 +84,7 @@ $(document).ready(function() {
           $('#tweet-submit')[0].reset();
           $('#counter').text(140);
           //re-fetches tweets to show submitted tweet
-          loadTweets();          
+          loadTweets();
         },
       });
     }
@@ -95,7 +98,7 @@ $(document).ready(function() {
       success: function(tweetData) {
         renderTweets(tweetData);
       }
-    })
-  }
-  loadTweets();          
+    });
+  };
+  loadTweets();
 });
