@@ -1,8 +1,21 @@
 $(document).ready(function() {
 
+  const escapeText = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }; 
+    
+  //extracts tweet data and appends it to tweet in HTML on main page
   const createTweetElement = function(tweetData) {
     
-    tweetData.created_at = timeago.format(tweetData.created_at);
+    //converts universal time to "how long ago"
+    const tweetCreatedAt = timeago.format(tweetData.created_at);
+    
+    //escapes the tweet text to remove scripting elements
+    const tweetContentEscaped = escapeText(tweetData.content.text);
+
+    //const text2 = $("<div>").text(tweetData.content.text).html();
 
     return(
       `<article class="tweet">
@@ -13,9 +26,9 @@ $(document).ready(function() {
           </div>
           <span class="handle">${tweetData.user.handle}</span>
         </header>
-        <p class="tweet-content">${tweetData.content.text}</p>
+        <p class="tweet-content">${tweetContentEscaped}</p>
         <footer>
-          <span class="tweet-date">${tweetData.created_at}</span>
+          <span class="tweet-date">${tweetCreatedAt}</span>
             <div class="tweet-reactions">
               <span class="flag"><i class="fa-solid fa-flag"></i></span>
               <span class="retweet"><i class="fa-solid fa-retweet"></i></span>
@@ -26,9 +39,9 @@ $(document).ready(function() {
     );
   }
 
+  //iterates through tweet object and calls createTweetElement for each tweet
   const renderTweets = function(tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
+  
     // takes return value and appends it to the tweets container
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -36,32 +49,33 @@ $(document).ready(function() {
     }
   }
 
-  //!!!what is "event"?
+  //submits tweet from new tweet form
   $('#tweet-submit').submit(function (event) { 
+
     //prevents default http POST from the tweet form
     event.preventDefault();
 
     if ($('#counter').text() < 0) {
-      $("#tweet-status").text("Sorry, you cannot submit more than 140 characters!").show().fadeOut( 2000 );
+      $("#tweet-status").slideUp();
+      $("#tweet-status").text("You've got too much to say.  Get to the point! 🤭").slideDown();
     } 
     else if ($('#counter').text() >= 140) {
-      $("#tweet-status").text("Sorry, you cannot submit an empty tweet!").show().fadeOut( 2000 );
+      $("#tweet-status").slideUp();
+      $("#tweet-status").text("Nothing to say? I'm sure you can think of something! 😏").slideDown();
     } else {
-      
-      $("#tweet-status").text("Tweet sent!").show().fadeOut( 2000 );
+      $("#tweet-status").slideUp();
+      $("#tweet-status").text("Success! You did it! 👌").slideDown().fadeOut(2000);
 
-      const tweetEntered = $(this);
+      const tweetDataSubmitted = $(this);
 
       //serialize tweet text for backend consumption
-      tweetQueryString = tweetEntered.serialize();
+      tweetDataSerialized = tweetDataSubmitted.serialize();
       
-      //send AJAX POST request
-      // $post("/tweets/", tweetQueryString);
-      
+      //sends AJAX POST request to add tweet to data object
       $.ajax({
         type: "POST",
         url: "/tweets",
-        data: tweetQueryString,
+        data: tweetDataSerialized,
         success: function() {
           //resets the tweet form and resets the counter back to 140 characters
           $('#tweet-submit')[0].reset();
@@ -69,19 +83,11 @@ $(document).ready(function() {
           //re-fetches tweets to show submitted tweet
           loadTweets();          
         },
-
-
-        // error: function(error) {}
-        // dataType: dataType
-
-
       });
-
-      //$('#tweet-submit').trigger("reset");
-
-
     }
   });
+
+  //sends AJAX GET request to get tweet object and calls renderTweets
   const loadTweets = function() {
     $.ajax({
       type: "GET",
@@ -91,14 +97,5 @@ $(document).ready(function() {
       }
     })
   }
-  
-  // const loadTweets = function() {
-  //   $.get("/tweets", function(tweetData) {
-  //     renderTweets(tweetData);
-  //   });
-  // };
-  
   loadTweets();          
-
-
 });

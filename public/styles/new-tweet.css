@@ -1,3 +1,27 @@
+/* .error-container {
+  position: relative;
+  height:25px
+} */
+
+#tweet-status {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 0.85em;
+  display: none;
+  /* position: absolute; */
+   height: 24px;  
+  border-style: 10px solid;
+  border: #ff0000;
+  /* z-index: 5;
+  /* margin: 100px; */
+  padding-top: 25px;
+  text-align: center;
+}
+
+#tweet-submit {
+  margin: 1.5em 0em;
+}
+
 .tweet-form {
   color: #FFFFFF; 
   height: 120px;
@@ -17,7 +41,7 @@
 }
 
 #tweet-text::placeholder {
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: bold;
   color: #545149;
 }
