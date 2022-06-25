@@ -8,7 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1655741030803
+    "created_at": 1655319847488
   },
   {
     "user": {
@@ -19,7 +19,7 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1655827430803
+    "created_at": 1655406247488
   },
   {
     "user": {
@@ -30,7 +30,7 @@
     "content": {
       "text": "Tell me, what is it you plan to do with your one wild and precious life?"
     },
-    "created_at": 1655913830803
+    "created_at": 1655492647488
   },
   {
     "user": {
@@ -41,7 +41,7 @@
     "content": {
       "text": "To act is to be committed, and to be committed is to be in danger."
     },
-    "created_at": 1656000230803
+    "created_at": 1655579047488
   },
   {
     "user": {
@@ -52,6 +52,61 @@
     "content": {
       "text": "Friendship is certainly the finest balm for the pangs of disappointed love."
     },
-    "created_at": 1656086630803
+    "created_at": 1655665447488
+  },
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@SirIsaac"
+    },
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1655751847488
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd"
+    },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1655838247488
+  },
+  {
+    "user": {
+      "name": "Mary",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@MaryOliver"
+    },
+    "content": {
+      "text": "Tell me, what is it you plan to do with your one wild and precious life?"
+    },
+    "created_at": 1655924647488
+  },
+  {
+    "user": {
+      "name": "James",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@JamesBaldwin"
+    },
+    "content": {
+      "text": "To act is to be committed, and to be committed is to be in danger."
+    },
+    "created_at": 1656011047488
+  },
+  {
+    "user": {
+      "name": "Jane",
+      "avatars": "https://i.imgur.com/lRUnDgU.png",
+      "handle": "@JaneAusten"
+    },
+    "content": {
+      "text": "Friendship is certainly the finest balm for the pangs of disappointed love."
+    },
+    "created_at": 1656097447488
   }
 ]
