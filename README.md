@@ -41,12 +41,17 @@ There are also stylized buttons, interactive errors, and form focusing for impro
 
 ## Screenshots
 
-!["This is a screenshot of Tweeter in tablet mode at 1024px wide.  The tweet submission form has focus on click or via the "write new tweet" icon:"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet.png)
+*This is a screenshot of Tweeter in tablet mode at 1024px wide.  The tweet submission form has focus on click or via the "write new tweet" icon:*
+!["This is a screenshot of Tweeter in tablet mode at 1024px wide.  The tweet submission form has focus on click or via the "write new tweet" icon:"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet.png?raw=true)
 
-!["When scrolling down, an interactive scroll-up icon will appear which will allow the user to scroll up and focus on the tweet entry form:"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet_scroll.png)
+*When scrolling down, an interactive scroll-up icon will appear which will allow the user to scroll up and focus on the tweet entry form:*
+!["When scrolling down, an interactive scroll-up icon will appear which will allow the user to scroll up and focus on the tweet entry form:"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet_scroll.png?raw=true)
 
-!["There are also slide-down errors to notify the user when there is an error with the tweet submission (here in tablet mode):"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet_scroll.png)
+*There are also slide-down errors to notify the user when there is an error with the tweet submission (here in tablet mode):*
+!["There are also slide-down errors to notify the user when there is an error with the tweet submission (here in tablet mode):"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet_error.png?raw=true)
 
-!["Interactive buttons also work in phone mode:"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_phone.png)
+*Interactive buttons also work in phone mode:*
+!["Interactive buttons also work in phone mode:"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_phone.png?raw=true)
 
-!["Interactive scroll-up in phone mode:"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_phone_scroll.png)
+*Interactive scroll-up in phone mode:*
+!["Interactive scroll-up in phone mode:"](https://github.com/c5ho/tweeter/blob/master/docs/tweeter_phone_scroll.png?raw=true)
