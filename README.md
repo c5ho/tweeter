@@ -33,9 +33,22 @@ This project was built as a learning tool for me to practice HTML, CSS, JS, jQue
 
 ## Responsive Design
 
-This app was designed with a mobile-first mentality and later adapted for table/desktop consumption at resolutions with a minimum of 1024px width.
+This app was designed with a mobile-first mentality and later adapted for table/desktop consumption at resolutions with a minimum of 1024px width.  Mobile design targeted the iPhone 12 Pro with 390px width.
 
 There are also stylized buttons, interactive errors, and form focusing for improved visual queues.
 
+<br>
 
+## Screenshots
 
+!["This is a screenshot of Tweeter in tablet mode at 1024px wide.  The tweet submission form has focus on click or via the "write new tweet" icon:"] (https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet.png?raw=true)
+
+!["When scrolling down, an interactive scroll-up icon will appear which will allow the user to scroll up and focus on the tweet entry form:"] (https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet_scroll.png?raw=true)
+
+!["There are also slide-down errors to notify the user when there is an error with the tweet submission (here in tablet mode):"] (https://github.com/c5ho/tweeter/blob/master/docs/tweeter_tablet_scroll.png?raw=true)
+
+!["Interactive buttons also work in phone mode:"] 
+(https://github.com/c5ho/tweeter/blob/master/docs/tweeter_phone.png?raw=true)
+
+!["Interactive scroll-up in phone mode:"] 
+https://github.com/c5ho/tweeter/blob/master/docs/tweeter_phone_scroll.png?raw=true
