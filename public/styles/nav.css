@@ -4,6 +4,7 @@ nav {
   background-image: url("/images/45-degree-fabric-light.png");
   font-family: Bungee;
   font-size: 1em;
+  padding-top: 3vw;
   padding-left: 5vw;
   padding-right: 5vw;
   height: 120px;
@@ -16,26 +17,35 @@ nav {
   /*flex container*/
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
 }
 
-.write-new-div {
+.write-new-or-scroll {
   flex-direction: column;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.down-arrows {
-  color: #ff0000; 
+.write-new {
+  color: #eaeaea; 
+}
+
+.scroll-down {
+  color: #eaeaea; 
   display: flex;
   justify-content: center;
+  padding-top: 1vw;
+}
+
+.write-new:hover, .scroll-down:hover {
+  color: #ff0000; 
 }
 
 @media only screen and (min-width: 1024px) {
   
   nav {
-    padding: 51.15px;
+    padding: 40px
   }
 }
 

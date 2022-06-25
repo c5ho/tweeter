@@ -63,8 +63,8 @@ button:active {
   transform: translateY(-5px);
   transform: translateX(5px);
 }
-/* 
-#counter {
-  color: #545149;
-} */
+
+.redHighlight {
+  color: red;
+} 
 

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-article.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
@@ -27,15 +27,15 @@
     <script type="text/javascript" src="/scripts/client.js" type="text/javascript"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js" type="text/javascript"></script>
     <script type="text/javascript" src="/scripts/tweet-form-focus.js" type="text/javascript"></script>
-
   </head>
+
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="title">tweeter</div>
-      <div class="write-new-div">
+      <div class="write-new-or-scroll">
         <div class="write-new"><strong>Write</strong> a new tweet</div>
-        <div class="down-arrows"><i class="fa-solid fa-angles-down"></i></div>
+        <div class="scroll-down"><i class="fa-solid fa-angles-down fa-bounce"></i></div>
       </div>
     </nav>
 
@@ -50,6 +50,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="main-container">
+<div id="scroll-here"></div>
 
       <!-- Container for new tweet form -->
       <section class="new-tweet">
@@ -70,11 +71,22 @@
           </footer>
         </form>
       </section>
-     
+      
+      
+
+      
+      
       <!-- Container for all posted tweets entered dynamically via script-->
-      <section id="tweet-container"></section>
-      <!-- <input type="checkbox" id="btnControl"/>
-      <label class="btn" for="btnControl"><img src="https://placekitten.com/200/140" id="btnLeft" /></label> -->
+      <section id="tweet-container">
+      
+              
+        <a  href="#scroll-here" id="back-to-top" class="fa-stack fa-2x fa-bounce">
+            <i class="fa fa-circle fa-stack-2x icon-background"></i>
+            <i class="fa-solid fa-angles-up fa-stack-1x"></i>
+          </a>
+
+      </section>
+      
     </main>
   </body>
 </html>
