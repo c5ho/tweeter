@@ -1,3 +1,5 @@
+/* Styling properties for new tweet form *********************************************************/
+
 #tweet-status {
   color: #ff0000;
   font-weight: bold;
@@ -11,16 +13,9 @@
   margin: 1em 0em 1.5em;
 }
 
-/* .tweet-form {
-  color: #FFFFFF; 
-  height: 120px;
-  /* width: 100%; */
-/* } */
-
 #tweet-text {
   width: 100%;
   background-color: #f4f1ec;
-  /* color: #545149; */
   font-size: 1em;
   font-weight: bold;
   border: none;
@@ -31,31 +26,25 @@
 #tweet-text::placeholder {
   font-size: 1em;
   font-weight: bold;
-  /* color: #545149; */
-}
 
-/* .new-tweet {
-  width: 100%;
-} */
+}
 
 .tweet-button-counter {
   font-family: Bungee;
   margin-top: 0.5em;
   display: flex;
-  /* flex-direction: row;
-  align-items: center; */
   justify-content: space-between;
 }
 
 button {
   color: #FFFFFF; 
-  background-color: #7288d1; 
+  background-color: #b34bbcc0;
   border-radius: 4px;
   box-shadow: 5px 5px #999;
 }
 
 button:hover {
-  background-color: #4056A1; 
+  background-color: #792681c0; 
 }
 
 button:active {

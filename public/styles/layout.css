@@ -14,42 +14,7 @@ html {
 /*
  * Global layout stuff
  */
-
-/*DEBUG********************************************************************/
-/* .main-container { 
-  flex-direction: column;
-  border: 1px solid rgb(128, 0, 0);
-  border-left: 1px red;
-
-
-}
-
-header {
-  border: 5px solid rgb(41, 0, 128);
-}
-
-
-main {
-  border: 5px solid rgb(6, 128, 0);
-}
-
-.avatar {
-  background-color: #40a150; 
-}
-
-.username {
-  background-color: #40a150; 
-}
-
-.title {
-  background-color: #40a150; 
-}
-
-.write-new-div {
-  background-color: #40a150; 
-} */
- 
-/*DEBUG********************************************************************/
+/* main body element that includes the nav bar, header, and tweet-container **********************/
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -60,42 +25,46 @@ body {
   flex-direction: column;
 }
 
+/* main container that includes the new tweet form and all the past tweet articles ****************/
 .main-container {
   width: 90%;
   margin: auto;
   color: #545149;
 }
 
-.icon-background {
-  color: #c0ffc0;
-}
+/* scroll-up icon that appears when you scroll down 300px or further from start position **********/
+#scroll-up {
 
-#back-to-top{
-  height:50px;
-  width:50px;
   font-size: 1.5em;
   position:fixed;
   bottom:0;
   right:0;
   z-index:99;
-  padding-bottom: 3em;
   padding-right: 4em;
-  opacity:25%;
-
-  /*Position Out of View*/
-  /* bottom:-150px;
+  padding-bottom: 3em;
+  
+  /* icon position when out of view */
+  bottom: 0x;
   opacity:0;
-  transition: all .5s ease; */
+  transition: all .5s ease;
 }
 
-#back-to-top.show-btt{
-  /*Position In View*/
-  /* bottom:0;
+#scroll-up.show {
+  /* icon position when in view */
+  bottom:0;
   opacity:1;
-  transition: all .5s ease; */
+  transition: all .5s ease;
 }
 
- /* Desktop styles */
+#scroll-up:hover {
+  color: #ff0000; 
+}
+
+.icon-background {
+  color: #e8a2eec0;
+}
+
+ /* Desktop styles - for minimum 1024px wide *****************************************************/
 @media only screen and (min-width: 1024px) {
   
   body {
@@ -105,7 +74,7 @@ body {
   }
 
   .main-container {
-    margin-top: 120px;
+    padding-top: 120px;
     color: #545149;
     border-left: 200px;
     height: 100vh;

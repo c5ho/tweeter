@@ -1,3 +1,5 @@
+/* Styling properties for main header ************************************************************/
+
 #main-header {
   background-color: rgba(43, 39, 34, 0.80);
   background-image: url("/images/45-degree-fabric-light.png");
@@ -15,8 +17,7 @@
   color: #f4f1ec;
 }
 
-
-
+/* header moves to the left margin on screen 1024px and wider ************************************/
 @media only screen and (min-width: 1024px) {
   
   #main-header {
@@ -24,26 +25,12 @@
     background-image: none;
     margin-top: 240px;
     margin-left: 3%;
-    /* left: 0; */
-    /* position: fixed; */
     width: 30vw;
     color: #545149;
-
-
-
   }
   
-  /* .avatar {
-    background-color: #f4f1ec;
-    background-image: none;
-
-    
-
-  }
-*/
  .username {
     color: #545149;
-
  }
      
 }

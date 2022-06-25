@@ -35,7 +35,7 @@ nav {
   color: #eaeaea; 
   display: flex;
   justify-content: center;
-  padding-top: 1vw;
+  padding-top: 1vw; 
 }
 
 .write-new:hover, .scroll-down:hover {
@@ -46,6 +46,7 @@ nav {
   
   nav {
     padding: 40px
+  
   }
-}
 
+}
