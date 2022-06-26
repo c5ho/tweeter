@@ -1,3 +1,5 @@
+/* Styling properties for each tweet article *****************************************************/
+
 .tweet {    
   border-style: solid;
   padding: 5px;
@@ -58,27 +60,4 @@
   color:rgb(210, 17, 85);
 }
 
-.flag:focus {
-  color:rgb(0, 8, 116);
-}
 
-
-#btnControl {
-  display: none;
-}
-
-#btnControl:checked + label > img {
-  width: 70px;
-  height: 74px;
-}
-
-
-
-@media only screen and (min-width: 1024px) {
-  
-  /* .tweet {    
-    width: 60vw
-  } */
-  
-    
-}
